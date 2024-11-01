@@ -1,0 +1,14 @@
+{
+  "tripName": "Lunch",
+  "destination": "Kuala Lumpur",
+  "dateTime": "2024-11-01T15:34",
+  "activities": "Lunch",
+  "weatherForecast": {
+    "maxTemp": 32.4,
+    "minTemp": 24.3,
+    "condition": "Patchy rain nearby",
+    "icon": "//cdn.weatherapi.com/weather/64x64/day/176.png"
+  },
+  "createdAt": "2024-11-01T07:34:27.684Z",
+  "id": "1730446467684_Lunch.txt"
+}

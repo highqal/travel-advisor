@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Details - Weather Travel Advisor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/weather.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="weather.html">Weather</a></li>
+            <li><a href="itinerary.html">Itineraries</a></li>
+            <li><a href="calendar.html">Calendar</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="search-section">
+            <h1>Weather Search</h1>
+            <p class="search-description">Enter a city name to get detailed weather information</p>
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="Enter city name..."
+                    class="search-input"
+                >
+                <button onclick="handleSearch()" class="btn btn-primary">
+                    Search
+                </button>
+            </div>
+        </div>
+
+        <div id="loadingIndicator" class="loading-indicator hidden">
+            <div class="loading-spinner"></div>
+            <p>Loading weather data...</p>
+        </div>
+
+        <div id="errorMessage" class="error-message hidden"></div>
+
+        <div class="weather-details hidden" id="weatherDetails">
+            <div class="location-info">
+                <h2 id="locationName"></h2>
+                <p id="regionCountry"></p>
+                <p id="localTime"></p>
+            </div>
+
+            <div class="current-weather">
+                <div class="weather-main">
+                    <img id="weatherIcon" src="" alt="Weather Icon" class="weather-icon">
+                    <div class="temperature-display">
+                        <h3 id="currentTemp" class="current-temp"></h3>
+                        <p id="feelsLike" class="feels-like"></p>
+                        <p id="weatherDesc" class="weather-description"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="weather-stats">
+                <div class="stat-card">
+                    <span class="stat-label">Humidity</span>
+                    <p id="humidity" class="stat-value"></p>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Wind Speed</span>
+                    <p id="windSpeed" class="stat-value"></p>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Sunrise</span>
+                    <p id="sunrise" class="stat-value"></p>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Sunset</span>
+                    <p id="sunset" class="stat-value"></p>
+                </div>
+            </div>
+
+            <div class="forecast-section">
+                <h3>Forecast</h3>
+                <div id="forecastContainer" class="forecast-container">
+                    <!-- Forecast cards will be inserted here -->
+                </div>
+            </div>
+
+            <div class="clothing-recommendation">
+                <h3>Recommended Clothing</h3>
+                <p id="clothingAdvice"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/weather.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Travel Itineraries - Weather Travel Advisor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/itinerary.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="weather.html">Weather</a></li>
+            <li><a href="itinerary.html">Itineraries</a></li>
+            <li><a href="calendar.html">Calendar</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="itinerary-section">
+            <h2>My Travel Itineraries</h2>
+            
+            <button id="newItineraryBtn" class="primary-btn">Create New Itinerary</button>
+
+            <div id="itineraryForm" class="hidden">
+                <h3>New Itinerary</h3>
+                <form id="createItineraryForm">
+                    <input type="text" id="tripName" placeholder="Trip Name" required>
+                    <input type="text" id="destination" placeholder="Destination" required>
+                    <div class="date-time-inputs">
+                        <input type="date" id="date" required>
+                        <input type="time" id="time" required>
+                    </div>
+                    <textarea id="activities" placeholder="Planned Activities"></textarea>
+                    <button type="submit" class="primary-btn">Save Itinerary</button>
+                    <button type="button" class="secondary-btn" id="cancelBtn">Cancel</button>
+                </form>
+            </div>
+
+            <div id="itineraryList" class="itinerary-list">
+                <!-- Itineraries will be displayed here -->
+            </div>
+        </div>
+    </div>
+
+    <div id="loadingSpinner" class="loading-spinner hidden">
+        <div class="spinner"></div>
+    </div>
+
+    <div id="modalOverlay" class="modal-overlay hidden">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 id="modalTitle">Notice</h3>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-content">
+                <p id="modalMessage"></p>
+            </div>
+            <div class="modal-footer">
+                <button id="modalConfirmBtn" class="btn btn-primary2" onclick="handleModalConfirm()">OK</button>
+                <button id="modalCancelBtn" class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/itinerary.js"></script>
+</body>
+</html>

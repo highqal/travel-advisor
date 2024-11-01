@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calendar - Weather Travel Advisor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/calendar.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="weather.html">Weather</a></li>
+            <li><a href="itinerary.html">Itineraries</a></li>
+            <li><a href="calendar.html">Calendar</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="calendar-section">
+            <div class="calendar-header">
+                <h2>Travel Calendar</h2>
+                <div class="calendar-navigation">
+                    <button id="prevMonth" class="nav-btn">&lt;</button>
+                    <h3 id="currentMonthYear"></h3>
+                    <button id="nextMonth" class="nav-btn">&gt;</button>
+                </div>
+            </div>
+
+            <div class="calendar-grid">
+                <div class="weekdays">
+                    <div>Sun</div>
+                    <div>Mon</div>
+                    <div>Tue</div>
+                    <div>Wed</div>
+                    <div>Thu</div>
+                    <div>Fri</div>
+                    <div>Sat</div>
+                </div>
+                <div id="calendarDays" class="days"></div>
+            </div>
+
+            <div id="initialMessage" class="initial-message">
+                Select a date to view itineraries
+            </div>
+
+            <div id="eventDetails" class="event-details hidden">
+                <div class="event-details-header">
+                    <h3>Itineraries for <span id="selectedDate"></span></h3>
+                    <button class="close-btn" onclick="closeEventDetails()">&times;</button>
+                </div>
+                <div id="eventsList" class="events-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/calendar.js"></script>
+</body>
+</html>
